@@ -1,0 +1,485 @@
+{
+	"info": {
+		"_postman_id": "61df490e-ce36-458a-ad37-71da972458d4",
+		"name": "ProjetFinale",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32422395"
+	},
+	"item": [
+		{
+			"name": "afficherListeTacheIncomplete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/afficherListeTache",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"afficherListeTache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "afficherListeTacheComplete",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/afficherListeTache/complete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"afficherListeTache",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "afficherDetail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/afficherDetail/10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"afficherDetail",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouterTache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Tâche de test\",\r\n  \"description\": \"Ceci est une tâche de test ajoutée via l'API.\",\r\n  \"date_debut\": \"2024-04-25\",\r\n  \"date_echeance\": \"2024-05-10\",\r\n  \"complete\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/ajouterTache",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"ajouterTache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifierTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titre\": \"Tâche de test modifier\",\r\n  \"description\": \"Ceci est une tâche de test ajoutée via l'API.\",\r\n  \"date_debut\": \"2024-04-25\",\r\n  \"date_echeance\": \"2024-05-10\",\r\n  \"tache_id\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/modifierTache",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"modifierTache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifierStatutTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/modifierSatutTache?complete=1&tache_id=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"modifierSatutTache"
+					],
+					"query": [
+						{
+							"key": "complete",
+							"value": "1"
+						},
+						{
+							"key": "tache_id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimerTache",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/supprimerTache?tache_id=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"supprimerTache"
+					],
+					"query": [
+						{
+							"key": "tache_id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouterSousTache",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tache_id\": 10,\r\n    \"titre\": \"titreSousTacheUtilisateur\",\r\n    \"complete\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/ajouterSousTache",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"ajouterSousTache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifierSousTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titre\": \"titreModifierSousTache\",\r\n    \"sous_tache_id\": 18\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/modifierSousTache",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"modifierSousTache"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifierStatutSousTache",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/modifierSatutSousTache?complete=0&sous_tache_id=17",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"modifierSatutSousTache"
+					],
+					"query": [
+						{
+							"key": "complete",
+							"value": "0"
+						},
+						{
+							"key": "sous_tache_id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "supprimerSousTache",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "cle_api 5f3f5d64-5d97-49bc-b86c-7eaa074226af",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/projetFinale/supprimerSousTache?sous_tache_id=17",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"projetFinale",
+						"supprimerSousTache"
+					],
+					"query": [
+						{
+							"key": "sous_tache_id",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ajouterUtilisateur",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nom\": \"TestUsager\",\r\n    \"prenom\": \"TestUsager\",\r\n    \"courriel\": \"asdadsd@icloud.com\",\r\n    \"mot_de_passe\": \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/usager/ajouterUtilisateur",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"usager",
+						"ajouterUtilisateur"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "demandeCleApi",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"courriel\": \"adamLambert@icloud.com\",\r\n    \"mot_de_passe\": \"GhostTown\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3030/api/usager/demandeCleApi",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3030",
+					"path": [
+						"api",
+						"usager",
+						"demandeCleApi"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
