@@ -55,6 +55,9 @@ document.getElementById('formulaireDemande').addEventListener('submit', function
 
     fetch('https://apiservicewebprojetfinale.onrender.com/api/usager/demandeCleApi', requestOptions)
     .then(response => {
+        if (!response.ok) {
+            throw new Error('Erreur lors de l\'ajout des données: ' + response.status);
+        }
         return response.json();
     })
     .then(data => {
